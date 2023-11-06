@@ -1,15 +1,16 @@
-### Book Review Platform
+## Book Review Platform
 
 This repository contains the code for the backend and frontend.
 
-#### Backend Setup
+### Backend Setup
 
-##### Prerequisites
+#### Prerequisites
 - XAMPP or WAMP installed
 - Composer installed
+- **NOTE**: If you don't have composer on your machine, there is vendor.zip file inside backend directory, unzip it in there.
+hopefully will be able to run the project with `php artisan serve`
 
-
-##### Installation Steps
+#### Installation Steps
 
 1. Navigate to the `backend` directory.
 2. Run `composer install` to install the dependencies.
@@ -17,24 +18,27 @@ This repository contains the code for the backend and frontend.
 4. Start the server by running `php artisan serve`.
 5. The backend api will be accessible at `http://127.0.0.1:8000/api/v1`.
 
-#### Frontend Setup
+### Frontend Setup
 
-##### Prerequisites
+#### Prerequisites
 - Node.js installed (including npm or yarn)
 
-##### Installation Steps
+#### Installation Steps
 
 1. Navigate to the `frontend` directory.
 2. Run `npm install` or `yarn install` to install the required dependencies.
 3. Start the frontend server by running `npm run dev` or `yarn start`.
 4. The frontend will be accessible at `http://localhost:3000`.
 
-#### Additional Information
+### Additional Information
 
 - **Database Details**: The backend uses a seeded database. Check the backend documentation for available endpoints and database details.
 
 - **Postman Collection**: For API testing, a Postman collection is available in the `postman_collection` directory.
 
 - **External Database Api**: I used Google Book Api as external database api.
+
+- **Not Having Compiser**: If you don;t have composer on your machine, the is vendor.zip file inside backend directory unzip it,
+hopefully will be able to run the project with `php artisan serve`
 
 Please ensure you have the necessary prerequisites installed and follow the provided steps to set up and run both the backend and frontend locally. Adjust the instructions or provide additional information as needed for the specific configurations or requirements of your project.
