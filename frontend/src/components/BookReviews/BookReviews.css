@@ -1,0 +1,99 @@
+.book-reviews {
+  padding: 6rem 0;
+}
+
+.book-reviews-header{
+    margin-bottom: 1rem;
+}
+
+.reviews-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  padding: 0 1.4rem;
+}
+
+.reviews-rating-text{
+    font-size: 1.4rem;
+    color: #666;
+    padding: 0 1.4rem;
+}
+
+.book-reviews-content {
+  gap: 4rem;
+}
+
+.book-reviews-info {
+  overflow-y: scroll;
+  max-height: 600px;
+  padding: 1.4rem;
+}
+.book-reviews-info::-webkit-scrollbar {
+  width: 8px;
+}
+.book-reviews-info::-webkit-scrollbar-track {
+  border-radius: 8px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.book-reviews-info::-webkit-scrollbar-thumb {
+  background-color: var(--purple-color);
+  outline: -1px solid slategray;
+  border-radius: 8px;
+}
+
+.review-item {
+  margin-bottom: 2rem;
+  border: 1px solid '#ccc';
+}
+.reviews-header {
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.reviews-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.reviews-rating {
+  display: flex;
+  align-items: center;
+}
+
+.reviews-rating img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.reviews-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 600px;
+}
+
+.reviews-date {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.no-reviews {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .book-reviews-content {
+    grid-template-columns: 50% 50%;
+    gap: 0;
+  }
+  .book-reviews-img {
+    padding: 0 6rem 0 2rem;
+  }
+  .book-reviews-img img {
+    max-width: 100%;
+  }
+}

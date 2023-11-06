@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "6c0086b4-04c3-4275-8fe1-081e9f946153",
+		"name": "Book Review Platform",
+		"description": "#### Notes\n- use the devurl as base url",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12162986"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "All Books",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/books",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book Genres",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/genres",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"genres"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Books",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/books/search?q=publishedDate=2020",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"books",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "publishedDate=2020"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/books/HcqPDwAAQBAJ",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"books",
+								"HcqPDwAAQBAJ"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Submit Review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"book_id\":\"VtRMEAAAQBAJ\",\r\n    \"name\":\"basist\",\r\n    \"review\":\"the book is perfect\",\r\n    \"rating\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/reviews",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book Reviews",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/reviews/In8mDwAAQBAJ",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"reviews",
+								"In8mDwAAQBAJ"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Google Book Api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.googleapis.com/books/v1/volumes?subject:fiction=&q=publishedDate=2022&key=AIzaSyAO5b6vuLiOcKhiyGPEqZWTc5zSIpg0NbY",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"books",
+						"v1",
+						"volumes"
+					],
+					"query": [
+						{
+							"key": "subject:fiction",
+							"value": ""
+						},
+						{
+							"key": "q",
+							"value": "publishedDate=2022"
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyAO5b6vuLiOcKhiyGPEqZWTc5zSIpg0NbY"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{api-key}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "X-Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api-key",
+			"value": "24PFN3WJ3XVIRFLV99OMQ7NC0XH9UTMB3MGQ5I62M66YRN5DZCFPLXZX3I5U96SC"
+		},
+		{
+			"key": "baseurl",
+			"value": "http://127.0.0.1:8000/api/v1"
+		}
+	]
+}
